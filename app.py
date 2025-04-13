@@ -16,9 +16,9 @@ if "processed_text" not in st.session_state:
 MODEL_OPTIONS = [
     "llama3-70b-8192",          # Meta's Llama 3 70B
     "llama3-8b-8192",           # Meta's Llama 3 8B
-    "mixtral-8x7b-32768",       # Mistral's Mixtral 8x7B
-    "gemma-7b-it",              # Google's Gemma 7B
-    "llama2-70b-4096",          # Meta's Llama 2 70B
+    "deepseek-r1-distill-qwen-32b",       # deepseek
+    "gemma2-9b-it",              # Google's Gemma 9B
+    "whisper-large-v3",          # Meta's Llama 2 70B
 ]
 
 # Streamlit app configuration
