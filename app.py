@@ -18,7 +18,7 @@ MODEL_OPTIONS = [
     "llama3-8b-8192",           # Meta's Llama 3 8B
     "deepseek-r1-distill-qwen-32b",       # deepseek
     "gemma2-9b-it",              # Google's Gemma 9B
-    "whisper-large-v3",          # Meta's Llama 2 70B
+    "qwen-2.5-32b",          # Meta's Llama 2 70B
 ]
 
 # Streamlit app configuration
