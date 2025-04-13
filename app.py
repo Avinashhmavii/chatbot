@@ -111,7 +111,7 @@ if prompt := st.chat_input("Ask me anything..."):
                      for m in st.session_state.messages],
             model=selected_model,
             temperature=0.5,
-            max_tokens=2048
+            max_tokens=7000
         )
         
         # Get AI response
