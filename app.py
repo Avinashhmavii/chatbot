@@ -12,18 +12,13 @@ if "messages" not in st.session_state:
 if "processed_text" not in st.session_state:
     st.session_state.processed_text = ""
 
-# List of available Groq models
+# Updated list of verified available models
 MODEL_OPTIONS = [
-    "meta-llama/llama-3.3-70b-versatile",
-    "meta-llama/llama-3.1-8b-instant",
-    "meta-llama/llama-3.3-70b-specdec",
-    "mistral-saba-24b",
-    "deepseek-r1-distill-llama-70b",
-    "meta-llama/llama-4-scout-17b-16e-instruct",
-    "meta-llama/llama-4-maverick-17b-128e-instruct",
-    "qwen-2.5-32b",
-    "whisper-large-v3",
-    "gemma2-9b-it"
+    "llama3-70b-8192",          # Meta's Llama 3 70B
+    "llama3-8b-8192",           # Meta's Llama 3 8B
+    "mixtral-8x7b-32768",       # Mistral's Mixtral 8x7B
+    "gemma-7b-it",              # Google's Gemma 7B
+    "llama2-70b-4096",          # Meta's Llama 2 70B
 ]
 
 # Streamlit app configuration
@@ -43,7 +38,7 @@ with st.sidebar:
         accept_multiple_files=True
     )
 
-# Process uploaded files
+# Process uploaded files (keep the same as before)
 def process_files(uploaded_files):
     all_text = ""
     for file in uploaded_files:
@@ -71,7 +66,6 @@ def process_files(uploaded_files):
             all_text += f"\n\nError processing {file.name}: {str(e)}"
     
     return all_text
-
 # Process files when uploaded
 if uploaded_files:
     st.session_state.processed_text = process_files(uploaded_files)
